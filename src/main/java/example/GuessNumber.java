@@ -30,6 +30,20 @@ public class GuessNumber {
     }
 
     public boolean validInputNumber(int[] inputNumber) {
-        return false;
+        if(inputNumber.length != answer.length){
+            return false;
+        }
+
+        for (int i = 0; i < inputNumber.length; i++) {
+            if(inputNumber[i]<0 || inputNumber[i]>9){
+                return false;
+            }
+            for (int j = i+1; j < inputNumber.length-1; j++) {
+                if(inputNumber[i] == inputNumber[j]){
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
