@@ -25,10 +25,10 @@ public class GuessNumberTest {
     }
 
     @Test
-    void should_return_0A4B_when_guess_number_given_1234() {
+    void should_return_0A4B_when_guess_number_given_4321() {
         //given
-        int[] inputNumber = {1, 2, 3, 4};
-        int[] answer = {4,3,2,1};
+        int[] inputNumber = {4,3,2,1};
+        int[] answer = {1,2,3,4};
         GeneratorAnswer generatorAnswer = mock(GeneratorAnswer.class);
         when(generatorAnswer.generatorAnswer()).thenReturn(answer);
 
@@ -42,10 +42,10 @@ public class GuessNumberTest {
     }
 
     @Test
-    void should_return_0A0B_when_guess_number_given_1234() {
+    void should_return_0A0B_when_guess_number_given_5678() {
         //given
-        int[] inputNumber = {1, 2, 3, 4};
-        int[] answer = {5,6,7,8};
+        int[] inputNumber = {5,6,7,8};
+        int[] answer = {1,2,3,4};
         GeneratorAnswer generatorAnswer = mock(GeneratorAnswer.class);
         when(generatorAnswer.generatorAnswer()).thenReturn(answer);
 
@@ -59,10 +59,10 @@ public class GuessNumberTest {
     }
 
     @Test
-    void should_return_2A2B_when_guess_number_given_1234() {
+    void should_return_2A2B_when_guess_number_given_1243() {
         //given
-        int[] inputNumber = {1, 2, 3, 4};
-        int[] answer = {1,2,4,3};
+        int[] inputNumber = {1,2,4,3};
+        int[] answer = {1,2,3,4};
         GeneratorAnswer generatorAnswer = mock(GeneratorAnswer.class);
         when(generatorAnswer.generatorAnswer()).thenReturn(answer);
 
@@ -76,10 +76,10 @@ public class GuessNumberTest {
     }
 
     @Test
-    void should_return_1A1B_when_guess_number_given_1234() {
+    void should_return_1A1B_when_guess_number_given_1359() {
         //given
-        int[] inputNumber = {1, 2, 3, 4};
-        int[] answer = {1,3,5,9};
+        int[] inputNumber = {1,3,5,9};
+        int[] answer = {1,2,3,4};
         GeneratorAnswer generatorAnswer = mock(GeneratorAnswer.class);
         when(generatorAnswer.generatorAnswer()).thenReturn(answer);
 
