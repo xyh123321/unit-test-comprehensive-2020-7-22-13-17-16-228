@@ -125,4 +125,17 @@ public class GuessNumberTest {
         //then
         assertEquals(true,res);
     }
+
+    @Test
+    void should_return_true_when_generator_answer_given_valid_answer() {
+        //given
+        GeneratorAnswerImpl generatorAnswer = new GeneratorAnswerImpl();
+        int[] answer = generatorAnswer.generatorAnswer();
+
+        //when
+        boolean res = generatorAnswer.validAnswer(answer);
+
+        //then
+        assertEquals(true,res);
+    }
 }
