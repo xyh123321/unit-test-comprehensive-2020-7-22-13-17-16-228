@@ -108,4 +108,21 @@ public class GuessNumberTest {
         //then
         assertEquals("0A2B", res);
     }
+
+    @Test
+    void should_return_true_when_valid_inputnumber_given_2168() {
+        //given
+        int[] inputNumber = {2,1,6,8};
+        int[] answer = {1,2,3,4};
+        GeneratorAnswer generatorAnswer = mock(GeneratorAnswer.class);
+        when(generatorAnswer.generatorAnswer()).thenReturn(answer);
+
+        GuessNumber guessNumber = new GuessNumber(generatorAnswer);
+
+        //when
+        boolean res = guessNumber.validInputNumber(inputNumber);
+
+        //then
+        assertEquals(true,res);
+    }
 }

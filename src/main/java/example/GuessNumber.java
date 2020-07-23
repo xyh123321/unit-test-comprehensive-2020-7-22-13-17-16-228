@@ -10,6 +10,9 @@ public class GuessNumber {
     }
 
     public String guess(int[] inputNumber) {
+        if(!validInputNumber(inputNumber)){
+            return "Invalid";
+        }
         int correctNumber = 0, correctPositon = 0;
         for (int i = 0; i < inputNumber.length; i++) {
             for (int j = 0; j < answer.length; j++) {
@@ -26,7 +29,7 @@ public class GuessNumber {
         return correctPositon+"A"+correctNumber+"B";
     }
 
-
-
-
+    public boolean validInputNumber(int[] inputNumber) {
+        return false;
+    }
 }
