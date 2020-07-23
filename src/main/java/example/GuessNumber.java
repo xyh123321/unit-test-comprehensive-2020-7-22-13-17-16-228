@@ -19,10 +19,21 @@ public class GuessNumber {
             return "0A4B";
         }
 
+        if(isAllIncorrect(inputNumber)) {
+            return "0A0B";
+        }
+
         return null;
     }
 
-
+    private boolean isAllIncorrect(int[] inputNumber) {
+        for (int i = 0; i < inputNumber.length; i++) {
+            if(Arrays.asList(answer).contains(inputNumber[i])){
+                return false;
+            }
+        }
+        return true;
+    }
 
     private boolean isAllCorrect(int[] inputNumber) {
         for (int i = 0; i < inputNumber.length; i++) {
