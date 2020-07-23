@@ -5,13 +5,14 @@ import java.util.Arrays;
 public class GuessNumber {
     private int[] answer;
 
-    public GuessNumber() {
-    }
 
     public GuessNumber(GeneratorAnswer generatorAnswer) {
         this.answer = generatorAnswer.generatorAnswer();
     }
 
+    public GuessNumber(int[] answer) {
+        this.answer = answer;
+    }
 
     public String guess(int[] inputNumber) {
         if(!validInputNumber(inputNumber)){
