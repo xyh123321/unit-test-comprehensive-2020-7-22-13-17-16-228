@@ -10,24 +10,6 @@ public class GuessNumber {
     }
 
     public String guess(int[] inputNumber) {
-
-        if( isAllCorrect(inputNumber)) {
-            return "4A0B";
-        }
-
-        if(onlyNumAllCorrect(inputNumber)) {
-            return "0A4B";
-        }
-
-        if(isAllIncorrect(inputNumber)) {
-            return "0A0B";
-        }
-
-        return caluNumberCorrectAndPositionCorrect(inputNumber);
-
-    }
-
-    private String caluNumberCorrectAndPositionCorrect(int[] inputNumber) {
         int correctNumber = 0, correctPositon = 0;
         for (int i = 0; i < inputNumber.length; i++) {
             for (int j = 0; j < answer.length; j++) {
@@ -44,33 +26,7 @@ public class GuessNumber {
         return correctPositon+"A"+correctNumber+"B";
     }
 
-    private boolean isAllIncorrect(int[] inputNumber) {
-        for (int i = 0; i < inputNumber.length; i++) {
-            if(Arrays.asList(answer).contains(inputNumber[i])){
-                return false;
-            }
-        }
-        return true;
-    }
 
-    private boolean isAllCorrect(int[] inputNumber) {
-        for (int i = 0; i < inputNumber.length; i++) {
-            if(inputNumber[i] != answer[i]) {
-                return false;
-            }
-        }
-        return true;
-    }
 
-    private boolean onlyNumAllCorrect(int[] inputNumber) {
-        int count = 0;
-        for (int i = 0; i < inputNumber.length; i++) {
-            for (int j = 0; j < answer.length; j++) {
-                if(inputNumber[i] == answer[j] && i!=j) {
-                    count++;
-                }
-            }
-        }
-        return (count==4);
-    }
+
 }
