@@ -9,8 +9,8 @@ public class GenerateInputNumber {
         Scanner scanner = new Scanner(System.in);
         int[] res = new int[4];
         int count = 1;
+        System.out.println("Please input your  answer");
         while (count <5) {
-            System.out.println("Please input the "+count+" number");
             int num = scanner.nextInt();
             if(num>=0&&num<=9){
                 res[count-1] = num;

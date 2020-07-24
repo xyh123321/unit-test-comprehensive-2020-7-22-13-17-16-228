@@ -3,7 +3,7 @@ package example;
 import java.util.Arrays;
 
 public class GuessNumber {
-    private int[] answer;
+    private final int[] answer;
 
 
     public GuessNumber(GeneratorAnswer generatorAnswer) {

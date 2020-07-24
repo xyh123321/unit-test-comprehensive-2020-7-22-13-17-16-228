@@ -14,8 +14,8 @@ public class GeneratorAnswerImpl implements GeneratorAnswer{
         while (count <4) {
             boolean norepeat = true;
             int num = random.nextInt(9);
-            for (int i = 0; i < res.length; i++) {
-                if(res[i] == num){
+            for (int re : res) {
+                if (re == num) {
                     norepeat = false;
                     break;
                 }
