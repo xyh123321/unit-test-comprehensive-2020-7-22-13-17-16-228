@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
 
 
-        AnswerGenerator generatorAnswer = new AnswerGenerator();
-        int[] answer = generatorAnswer.generatorAnswer();
+        AnswerGenerator answerGenerator = new AnswerGenerator();
+        int[] answer = answerGenerator.generatorAnswer();
         StringBuilder ans = new StringBuilder();
         for (int a:answer) {
             ans.append(a);
