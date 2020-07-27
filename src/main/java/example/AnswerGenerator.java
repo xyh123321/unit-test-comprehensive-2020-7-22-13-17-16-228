@@ -1,28 +1,18 @@
 package example;
 
-import java.util.Random;
+import java.util.*;
 
 public class AnswerGenerator {
 
     public int[] generatorAnswer() {
-        int count = 0;
+        Set<Integer> set = new HashSet<>();
         Random random = new Random();
-        int[] answer = new int[4];
-        while (count < 4) {
-            boolean norepeat = true;
+
+        while (set.size() < 4) {
             int randomNum = random.nextInt(9);
-            for (int ans : answer) {
-                if (ans == randomNum) {
-                    norepeat = false;
-                    break;
-                }
-            }
-            if (norepeat) {
-                answer[count] = randomNum;
-                count++;
-            }
+            set.add(randomNum);
         }
-        return answer;
+        return set.stream().mapToInt(Integer::valueOf).toArray();
     }
 
 }
