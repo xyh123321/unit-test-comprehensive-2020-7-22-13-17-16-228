@@ -2,8 +2,8 @@ package example;
 
 import java.util.Random;
 
-public class AnswerGenerator implements GeneratorAnswer{
-    @Override
+public class AnswerGenerator{
+
     public int[] generatorAnswer() {
         int count = 0;
         Random random = new Random();

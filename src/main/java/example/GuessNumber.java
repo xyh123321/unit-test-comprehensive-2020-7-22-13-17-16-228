@@ -1,13 +1,11 @@
 package example;
 
-import java.util.Arrays;
-
 public class GuessNumber {
     private final int[] answer;
 
 
-    public GuessNumber(GeneratorAnswer generatorAnswer) {
-        this.answer = generatorAnswer.generatorAnswer();
+    public GuessNumber(AnswerGenerator answerGenerator) {
+        this.answer = answerGenerator.generatorAnswer();
     }
 
     public GuessNumber(int[] answer) {
@@ -51,4 +49,6 @@ public class GuessNumber {
         }
         return true;
     }
+
+
 }
