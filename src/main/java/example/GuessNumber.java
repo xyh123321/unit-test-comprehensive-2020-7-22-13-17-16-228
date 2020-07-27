@@ -8,23 +8,23 @@ public class GuessNumber {
     }
 
     public String guess(int[] inputNumber) {
-        if(!GuessNumberUtil.isLegal(inputNumber)){
+        if (!GuessNumberUtil.isLegal(inputNumber)) {
             return "Invalid";
         }
         int correctNumber = 0, correctPositon = 0;
         for (int i = 0; i < inputNumber.length; i++) {
             for (int j = 0; j < answer.length; j++) {
-                if(inputNumber[i] == answer[j]) {
-                    if(i==j){
+                if (inputNumber[i] == answer[j]) {
+                    if (i == j) {
                         correctPositon++;
-                    }else{
+                    } else {
                         correctNumber++;
                     }
 
                 }
             }
         }
-        return correctPositon+"A"+correctNumber+"B";
+        return correctPositon + "A" + correctNumber + "B";
     }
 
 }

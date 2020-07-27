@@ -1,11 +1,8 @@
 package example;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
-public class AnswerGenerator{
+public class AnswerGenerator {
 
     public int[] generatorAnswer() {
         int count = 0;
@@ -14,7 +11,7 @@ public class AnswerGenerator{
         for (int i = 0; i < res.length; i++) {
             res[i] = random.nextInt(9);
         }
-        while (count <4) {
+        while (count < 4) {
             boolean norepeat = true;
             int num = random.nextInt(9);
             for (int re : res) {
@@ -23,7 +20,7 @@ public class AnswerGenerator{
                     break;
                 }
             }
-            if(norepeat){
+            if (norepeat) {
                 res[count] = num;
                 count++;
             }
