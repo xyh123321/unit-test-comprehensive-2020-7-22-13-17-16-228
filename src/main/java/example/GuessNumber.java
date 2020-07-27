@@ -8,7 +8,7 @@ public class GuessNumber {
     }
 
     public String guess(int[] inputNumber) {
-        if(!validInputNumber(inputNumber)){
+        if(!GuessNumberUtil.isLegal(inputNumber)){
             return "Invalid";
         }
         int correctNumber = 0, correctPositon = 0;
@@ -26,24 +26,5 @@ public class GuessNumber {
         }
         return correctPositon+"A"+correctNumber+"B";
     }
-
-    public boolean validInputNumber(int[] inputNumber) {
-        if(inputNumber.length != answer.length){
-            return false;
-        }
-
-        for (int i = 0; i < inputNumber.length; i++) {
-            if(inputNumber[i]<0 || inputNumber[i]>9){
-                return false;
-            }
-            for (int j = i+1; j < inputNumber.length-1; j++) {
-                if(inputNumber[i] == inputNumber[j]){
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
 
 }

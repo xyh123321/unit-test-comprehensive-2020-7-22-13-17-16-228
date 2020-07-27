@@ -95,11 +95,9 @@ public class GuessNumberTest {
     void should_return_true_when_valid_inputnumber_given_2168() {
         //given
         int[] inputNumber = {2,1,6,8};
-        int[] answer = {1,2,3,4};
-        GuessNumber guessNumber = new GuessNumber(answer);
 
         //when
-        boolean res = guessNumber.validInputNumber(inputNumber);
+        boolean res = GuessNumberUtil.isLegal(inputNumber);
 
         //then
         assertTrue(res);
@@ -112,7 +110,7 @@ public class GuessNumberTest {
         int[] answer = generatorAnswer.generatorAnswer();
 
         //when
-        boolean res = generatorAnswer.validAnswer(answer);
+        boolean res = GuessNumberUtil.isLegal(answer);
 
         //then
         assertTrue(res);

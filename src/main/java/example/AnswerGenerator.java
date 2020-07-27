@@ -31,21 +31,4 @@ public class AnswerGenerator{
         return res;
     }
 
-    public boolean validAnswer(int[] answer) {
-        if(answer.length != 4){
-            return false;
-        }
-
-        for (int i = 0; i < answer.length; i++) {
-            if(answer[i]<0 || answer[i]>9){
-                return false;
-            }
-            for (int j = i+1; j < answer.length-1; j++) {
-                if(answer[i] == answer[j]){
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
 }
