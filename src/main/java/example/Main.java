@@ -5,29 +5,33 @@ public class Main {
 
         AnswerGenerator answerGenerator = new AnswerGenerator();
         int[] answer = answerGenerator.generatorAnswer();
-        StringBuilder ans = new StringBuilder();
+        StringBuilder finalAnswer = new StringBuilder();
         for (int a : answer) {
-            ans.append(a);
+            finalAnswer.append(a);
         }
 
         GuessNumber guessNumber = new GuessNumber(answer);
 
-        for (int i = 0; i < 6; i++) {
-            GenerateInputNumber generateInputNumber = new GenerateInputNumber();
-            int[] inputNumber = generateInputNumber.generateInputNumber();
-            String res = guessNumber.guess(inputNumber);
-            // System.out.println("answer "+ans);
-            if (i == 5) {
-                System.out.println("you are failed!");
-                System.out.println("The final answer is " + ans);
-                break;
-            }
-            if ("4A0B".equals(res)) {
-                System.out.println("You win!");
-                break;
-            } else {
-                System.out.println("you answer is " + res);
-            }
+        for (int guessCount = 0; guessCount < 6; guessCount++) {
+            if (guess(guessNumber, guessCount)) break;
         }
+        System.out.println("The final answer is " + finalAnswer);
+    }
+
+    private static boolean guess(GuessNumber guessNumber, int guessCount) {
+        GenerateInputNumber generateInputNumber = new GenerateInputNumber();
+        int[] inputNumber = generateInputNumber.generateInputNumber();
+        String res = guessNumber.guess(inputNumber);
+        if (guessCount == 5) {
+            System.out.println("you are failed!");
+            return true;
+        }
+        if ("4A0B".equals(res)) {
+            System.out.println("You win!");
+            return true;
+        } else {
+            System.out.println("you answer is " + res);
+        }
+        return false;
     }
 }
