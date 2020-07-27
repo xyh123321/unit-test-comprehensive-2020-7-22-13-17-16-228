@@ -1,21 +1,18 @@
 package example;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
         AnswerGenerator answerGenerator = new AnswerGenerator();
         int[] answer = answerGenerator.generatorAnswer();
-        StringBuilder finalAnswer = new StringBuilder();
-        for (int a : answer) {
-            finalAnswer.append(a);
-        }
-
         GuessNumber guessNumber = new GuessNumber(answer);
 
         for (int guessCount = 0; guessCount < 6; guessCount++) {
             if (guess(guessNumber, guessCount)) break;
         }
-        System.out.println("The final answer is " + finalAnswer);
+        System.out.println("The final answer is " + Arrays.toString(answer));
     }
 
     private static boolean guess(GuessNumber guessNumber, int guessCount) {
