@@ -3,11 +3,6 @@ package example;
 public class GuessNumber {
     private final int[] answer;
 
-
-    public GuessNumber(AnswerGenerator answerGenerator) {
-        this.answer = answerGenerator.generatorAnswer();
-    }
-
     public GuessNumber(int[] answer) {
         this.answer = answer;
     }
