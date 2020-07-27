@@ -3,7 +3,7 @@ package example;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class GuessNumberTest {
     @Test
@@ -102,7 +102,7 @@ public class GuessNumberTest {
         boolean res = guessNumber.validInputNumber(inputNumber);
 
         //then
-        assertEquals(true,res);
+        assertTrue(res);
     }
 
     @Test
@@ -115,7 +115,7 @@ public class GuessNumberTest {
         boolean res = generatorAnswer.validAnswer(answer);
 
         //then
-        assertEquals(true,res);
+        assertTrue(res);
     }
 
 
