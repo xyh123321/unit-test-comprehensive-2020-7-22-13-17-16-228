@@ -2,7 +2,7 @@ package example;
 
 import java.util.Random;
 
-public class GeneratorAnswerImpl implements GeneratorAnswer{
+public class AnswerGenerator implements GeneratorAnswer{
     @Override
     public int[] generatorAnswer() {
         int count = 0;

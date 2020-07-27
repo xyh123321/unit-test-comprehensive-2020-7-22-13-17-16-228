@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        GeneratorAnswerImpl generatorAnswer = new GeneratorAnswerImpl();
+        AnswerGenerator generatorAnswer = new AnswerGenerator();
         int[] answer = generatorAnswer.generatorAnswer();
         String ans = "";
         for (int a:answer) {

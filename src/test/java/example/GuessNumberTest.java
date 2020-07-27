@@ -129,7 +129,7 @@ public class GuessNumberTest {
     @Test
     void should_return_true_when_generator_answer_given_valid_answer() {
         //given
-        GeneratorAnswerImpl generatorAnswer = new GeneratorAnswerImpl();
+        AnswerGenerator generatorAnswer = new AnswerGenerator();
         int[] answer = generatorAnswer.generatorAnswer();
 
         //when
