@@ -6,9 +6,9 @@ public class Main {
 
         AnswerGenerator generatorAnswer = new AnswerGenerator();
         int[] answer = generatorAnswer.generatorAnswer();
-        String ans = "";
+        StringBuilder ans = new StringBuilder();
         for (int a:answer) {
-            ans +=String.valueOf(a);
+            ans.append(a);
         }
 
         GuessNumber guessNumber = new GuessNumber(answer);

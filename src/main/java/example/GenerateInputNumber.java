@@ -3,7 +3,6 @@ package example;
 import java.util.Scanner;
 
 public class GenerateInputNumber {
-    private int[] inputNumber;
 
     public int[] generateInputNumber() {
         Scanner scanner = new Scanner(System.in);
