@@ -8,7 +8,7 @@ public class GuessNumber {
     }
 
     public String guess(int[] inputNumber) {
-        if (!GuessNumberUtil.isLegal(inputNumber)) {
+        if (!AnswerValidator.isLegal(inputNumber)) {
             return "Invalid";
         }
         int correctNumber = 0, correctPositon = 0;

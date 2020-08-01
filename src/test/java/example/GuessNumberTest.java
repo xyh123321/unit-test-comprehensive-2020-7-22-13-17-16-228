@@ -97,7 +97,7 @@ public class GuessNumberTest {
         int[] inputNumber = {2, 1, 6, 8};
 
         //when
-        boolean res = GuessNumberUtil.isLegal(inputNumber);
+        boolean res = AnswerValidator.isLegal(inputNumber);
 
         //then
         assertTrue(res);
@@ -110,7 +110,7 @@ public class GuessNumberTest {
         int[] answer = generatorAnswer.generatorAnswer();
 
         //when
-        boolean res = GuessNumberUtil.isLegal(answer);
+        boolean res = AnswerValidator.isLegal(answer);
 
         //then
         assertTrue(res);

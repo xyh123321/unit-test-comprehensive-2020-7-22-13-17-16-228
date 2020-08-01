@@ -1,6 +1,6 @@
 package example;
 
-public class GuessNumberUtil {
+public class AnswerValidator {
 
     public static boolean isLegal(int[] numbers) {
         if (numbers.length != 4) {
