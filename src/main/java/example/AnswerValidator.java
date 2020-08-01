@@ -1,5 +1,8 @@
 package example;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class AnswerValidator {
 
     public static boolean isLegal(int[] numbers) {
@@ -7,16 +10,8 @@ public class AnswerValidator {
             return false;
         }
 
-        for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] < 0 || numbers[i] > 9) {
-                return false;
-            }
-            for (int j = i + 1; j < numbers.length - 1; j++) {
-                if (numbers[i] == numbers[j]) {
-                    return false;
-                }
-            }
-        }
-        return true;
+        long length = Arrays.stream(numbers).distinct().filter(number -> number >= 0 && number <= 9).count();
+
+        return length == 4;
     }
 }
