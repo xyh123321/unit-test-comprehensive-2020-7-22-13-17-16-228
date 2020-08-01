@@ -9,7 +9,7 @@ public class AnswerGenerator {
         Random random = new Random();
 
         while (set.size() < 4) {
-            int randomNum = random.nextInt(9);
+            int randomNum = random.nextInt(10);
             set.add(randomNum);
         }
         return set.stream().mapToInt(Integer::valueOf).toArray();
