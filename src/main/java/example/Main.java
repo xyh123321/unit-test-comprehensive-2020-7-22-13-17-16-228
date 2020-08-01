@@ -16,6 +16,7 @@ public class Main {
     }
 
     private static boolean guess(GuessNumber guessNumber, int guessCount) {
+        String correctGuess  = "4A0B";
         GenerateInputNumber generateInputNumber = new GenerateInputNumber();
         int[] inputNumber = generateInputNumber.generateInputNumber();
         String res = guessNumber.guess(inputNumber);
@@ -23,7 +24,7 @@ public class Main {
             System.out.println("you are failed!");
             return true;
         }
-        if ("4A0B".equals(res)) {
+        if (correctGuess.equals(res)) {
             System.out.println("You win!");
             return true;
         } else {
